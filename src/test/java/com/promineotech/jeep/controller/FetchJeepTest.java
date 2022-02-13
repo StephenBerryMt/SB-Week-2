@@ -2,6 +2,8 @@ package com.promineotech.jeep.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.math.BigDecimal;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,16 +42,23 @@ class FetchJeepTest {
 	
 	void testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied() {
 	    
-	    JeepModel model = JeepModel.WRANGLER;
-	    String trim = "Sport";
-	    String uri = String.format("http://localhost/%d/jeeps?model=%s&trim=%s", serverPort, model, trim);
-	    System.out.println(uri);
-	    
-	    ResponseEntity<Jeep> response = 
-	        restTemplate.exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<Jeep>() {});
-	    	assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-	}
-	
+//	    JeepModel model = JeepModel.WRANGLER;
+//	    String trim = "Sport";
+//	    String uri = String.format("http://localhost:%d/jeeps?model=%s&trim=%s", serverPort, model, trim);
+//	    System.out.println(uri);
+//	    
+//	    When: a connection is made to the URI
+//	    ResponseEntity<List<Jeep>> response = 
+//	        restTemplate.exchange(uri, HttpMethod.GET, null,
+//	        		new ParameterizedTypeReference<List<Jeep>>() {});
+//	    
+//	    Then: a success (OK - 200) status code is returned
+//	    	assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+//	}
+//	
+//	List<Jeep> expected = buildExpected();
+//	assertThat(response.getbody()).isEqualTo(expected);
 
+	}
 
 }
