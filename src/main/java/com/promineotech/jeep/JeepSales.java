@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguratio
 import com.promineotech.ComponentScanMarker;
 
 
-@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,WebMvcAutoConfiguration.class })
+//@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,WebMvcAutoConfiguration.class })
 @SpringBootApplication(scanBasePackageClasses = { ComponentScanMarker.class})
 public class JeepSales {
 

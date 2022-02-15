@@ -2,10 +2,12 @@ package com.promineotech.jeep.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.promineotech.jeep.entity.Jeep;
 import com.promineotech.jeep.entity.JeepModel;
+//import com.promineotech.jeep.service.DefaultJeepSalesService;
 import com.promineotech.jeep.service.JeepSalesService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -13,16 +15,19 @@ import lombok.extern.slf4j.Slf4j;
 
 
 
+
+
 @RestController
 @Slf4j
 public class DefaultJeepSalesController implements JeepSalesController {
+//	private static final Logger log = LoggerFactory.getLogger(DefaultJeepSalesService.class);
 	
-//	@Autowired
-//	private JeepSalesService jeepSalesService;
+	@Autowired
+	private JeepSalesService jeepSalesService;
 	
 	@Override
 	public List<Jeep> fetchJeeps(JeepModel model, String trim) {
-//	log.debug("Model ={}, Trim ={}", model, trim);
+		log.info("Model ={}, Trim ={}", model, trim);
 		return jeepSalesService.fetchJeeps(model, trim);
 	}
 

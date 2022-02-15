@@ -1,9 +1,6 @@
 spring:
   datasource:
-    password: root
-    username: 2580
-    url:  jdbc:mysql://localhost:3306/jeep
-
+    url:  jdbc:h2:mem:Jeep-sales
 logging:
   level:
     root: warn
